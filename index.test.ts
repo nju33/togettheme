@@ -1,3 +1,3 @@
 import togettheme = require('.');
 
-const theme = togettheme('')
+const theme = togettheme({});
