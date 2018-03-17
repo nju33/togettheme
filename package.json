@@ -1,24 +1,36 @@
 {
   "name": "togettheme",
   "version": "0.0.1",
-  "main": "index.js",
-  "types": "index.d.ts",
+  "main": "dist/togettheme.js",
+  "umd:main": "dist/togettheme.umd.js",
+  "module": "dist/togettheme.m.js",
+  "source": "src/togettheme.ts",
+  "types": "togettheme.d.ts",
   "license": "MIT",
-  "scripts": {
-    "test": "jest"
-  },
   "repository": "nju33/togettheme",
-  "files": [
-    "index.d.ts",
-    "index.js",
-    "README.md",
-    "yarn.lock"
+  "keywords": [
+    "object"
   ],
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "prepare": "yarn build",
+    "build": "yarn src:build",
+    "presrc:build": "babel src -d tmp",
+    "src:build": "microbundle -i tmp/index.js --name togettheme",
+    "postsrc:build": "rm -rf tmp",
+    "test": "jest",
+    "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
+  },
   "dependencies": {
     "lodash": "^4.17.5",
-    "togetprop": "^0.0.2"
+    "togetprop": "^0.0.4"
   },
   "devDependencies": {
-    "jest": "^22.1.4"
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "jest": "^22.1.4",
+    "microbundle": "^0.4.4"
   }
 }
