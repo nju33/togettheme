@@ -12,7 +12,8 @@
     "object"
   ],
   "files": [
-    "dist"
+    "dist",
+    "togettheme.d.ts"
   ],
   "scripts": {
     "prepare": "yarn build",
