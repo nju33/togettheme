@@ -1,6 +1,6 @@
 {
   "name": "togettheme",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "dist/togettheme.js",
   "umd:main": "dist/togettheme.umd.js",
   "module": "dist/togettheme.m.js",
