@@ -1,5 +1,7 @@
 # togettheme
 
+[![CircleCI](https://circleci.com/gh/nju33/togettheme.svg?style=svg)](https://circleci.com/gh/nju33/togettheme)
+
 ## Install
 
 ```bash
